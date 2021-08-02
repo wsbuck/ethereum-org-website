@@ -11,7 +11,7 @@ const writeToCache = (key, value) => {
 
 const readFromCache = (key) => JSON.parse(localStorage.getItem(key)) || null
 
-export const getFreshData = async (url, cacheResponse = false) => {
+const getFreshData = async (url, cacheResponse = false) => {
   const { data } = await axios.get(url)
   cacheResponse && writeToCache(url, data)
   return data

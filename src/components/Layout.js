@@ -9,7 +9,6 @@ import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
 import Footer from "./Footer"
-import ReleaseBanner from "./ReleaseBanner"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
@@ -114,7 +113,6 @@ const Layout = (props) => {
                 path={path}
               />
               {shouldShowSideNav && <SideNavMobile path={path} />}
-              <ReleaseBanner />
               <MainContainer>
                 {shouldShowSideNav && <SideNav path={path} />}
                 <MainContent>
